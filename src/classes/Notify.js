@@ -47,25 +47,25 @@ Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 					"icon_url": ""
 				},
 				"fields": [{
-					"name": "Notification Type",
+					"name": "Notification",
 					"value": type,
 					"inline": true
 		   		},
 		//    {
-		//			"name": "Stock Count",
+		//			"name": "Stock",
 		//			"value": stock,
 		//			"inline": true
 		//		},
 				{
-					"name": "Brand",
+					"name": "Site",
 					"value": brand,
 					"inline": true
 				}, {
-					"name": "Price",
+					"name": "Prix",
 					"value": price,
 					"inline": true
 				}, {
-					"name": "Links 🚪",
+					"name": "Liens 🚪",
 					"value": links
 				}]
 			}]
@@ -112,7 +112,7 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 	//			  "short": "false"
 	//			},
 	        {
-				  "title": "Brand",
+				  "title": "Site",
 				  "value": brand,
 				  "short": "false"
 				}, {
@@ -120,11 +120,11 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 				  "value": type,
 				  "short": "false"
 				}, {
-				  "title": "Price",
+				  "title": "Prix",
 				  "value": price,
 				  "short": "false"
 				}, {
-				  "title": "Links 🚪",
+				  "title": "Liens 🚪",
 				  "value": links,
 				  "short": "false"
 				}
