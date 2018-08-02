@@ -107,7 +107,7 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 			  "color": color,
 			  "fields": [
 	//			{
-	//			  "title": "Stock Count",
+	//			  "title": "Stock",
 	//			  "value": stock,
 	//			  "short": "false"
 	//			},
@@ -116,7 +116,7 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 				  "value": brand,
 				  "short": "false"
 				}, {
-				  "title": "Notification Type",
+				  "title": "Notification",
 				  "value": type,
 				  "short": "false"
 				}, {
