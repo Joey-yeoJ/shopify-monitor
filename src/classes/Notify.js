@@ -7,9 +7,9 @@ Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 
 	let myWebhook = new DiscordWebhook(webhook_url);
 	if (isNaN(metadata.stock)) {
-		let stock = 'Unavailable'
+		let stock; 'Unavailable'
 	} else {
-		let stock = metadata.stock
+		let stock; metadata.stock
 	}
 
 	let price = metadata.price
@@ -35,26 +35,28 @@ Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 				"color": color,
 				"timestamp": new Date().toISOString(),
 				"footer": {
-					"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-					"text": "Shopify Monitor by dzt"
+					"icon_url": "https://cdn.discordapp.com/icons/437322749145251841/2702ce171fc8d94f68cc7c9e1a595e6e.png",
+					"text": "CACTUS JOE 🤠"
 				},
 				"thumbnail": {
 					"url": metadata.img
 				},
 				"author": {
-					"name": "Shopify Monitor",
-					"url": "https://discordapp.com",
-					"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+					"name": "",
+					"url": "",
+					"icon_url": ""
 				},
 				"fields": [{
 					"name": "Notification Type",
 					"value": type,
 					"inline": true
-				//}, {
-				//	"name": "Stock Count",
-				//	"value": stock,
-				//	"inline": true
-				}, {
+		   		},
+		//    {
+		//			"name": "Stock Count",
+		//			"value": stock,
+		//			"inline": true
+		//		},
+				{
 					"name": "Brand",
 					"value": brand,
 					"inline": true
@@ -63,7 +65,7 @@ Notify.discord = function (webhook_url, url, brand, metadata, type, color) {
 					"value": price,
 					"inline": true
 				}, {
-					"name": "Links",
+					"name": "Links 🚪",
 					"value": links
 				}]
 			}]
@@ -76,9 +78,9 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 	let webhook = new SlackWebhook(webhook_url);
 
 	if (isNaN(metadata.stock)) {
-		let stock = 'Unavailable'
+		let stock; 'Unavailable'
 	} else {
-		let stock = metadata.stock
+		let stock; metadata.stock
 	}
 
 	let price = metadata.price
@@ -104,11 +106,12 @@ Notify.slack = function (webhook_url, url, brand, metadata, type, color) {
 			  "title_link": url,
 			  "color": color,
 			  "fields": [
-				{
-				  "title": "Stock Count",
-				  "value": stock,
-				  "short": "false"
-				}, {
+	//			{
+	//			  "title": "Stock Count",
+	//			  "value": stock,
+	//			  "short": "false"
+	//			},
+	        {
 				  "title": "Brand",
 				  "value": brand,
 				  "short": "false"
@@ -157,16 +160,16 @@ Notify.ys = function (webhook_url, data) {
 				"color": 15844367,
 				"timestamp": new Date().toISOString(),
 				"footer": {
-					"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png",
-					"text": "Shopify Monitor by dzt"
+					"icon_url": "https://cdn.discordapp.com/icons/437322749145251841/2702ce171fc8d94f68cc7c9e1a595e6e.png",
+					"text": "CACTUS JOE 🤠"
 				},
 				"thumbnail": {
 					"url": data.img
 				},
 				"author": {
-					"name": "Shopify Monitor",
-					"url": "https://discordapp.com",
-					"icon_url": "https://cdn.discordapp.com/embed/avatars/0.png"
+					"name": "",
+					"url": "",
+					"icon_url": ""
 				},
 				"fields": [{
 					"name": "Sizes",
