@@ -18,9 +18,9 @@ Shopify.parseSitemap = function (url, proxy, userAgent, callback) {
 
 		if (err) return callback(err, null);
 
-		if (body.indexOf('Please try again in a couple minutes by refreshing the page') > -1) {
+		if (body.indexOf('Veuillez réessayer dans quelques minutes en actualisant la page') > -1) {
 
-			return callback('Temp Ban Occured.', null);
+			return callback('Ban temporairement.', null);
 
 		} else if (body.indexOf('http://www.sitemaps.org/schemas') > -1) {
 
@@ -35,7 +35,7 @@ Shopify.parseSitemap = function (url, proxy, userAgent, callback) {
 			})
 
 		} else {
-			return callback('Invalid Shopify Site.', null);
+			return callback('Site Shopify invalide.', null);
 		}
 
 	})
@@ -90,7 +90,7 @@ Shopify.fetchYS = function (userAgent, proxy, mode, callback) {
 			data = {
 				pageURL: resp.request.uri.href,
 				img: null,
-				title: (mode == null) ? 'Monior Started @ Password Page' : 'Password Page Live',
+				title: (mode == null) ? 'Monitor Started @ Password Page' : 'Password Page Live',
 				mode: 'pw',
 				variants: null
 			}
